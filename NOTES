@@ -1,0 +1,17 @@
+Info from https://github.com/este/este/wiki/Start-a-New-Project#clone-the-este-repository-and-keep-it-as-remote
+Clone the Este repository and keep it as a remote
+
+How to start a new project:
+
+git clone https://github.com/este/este.git -o upstream YOUR_PROJECT
+cd YOUR_PROJECT
+git remote add origin git@github.com:USER_NAME/YOUR_PROJECT.git
+git push -u origin master
+How to merge upstream changes to the current branch:
+
+git fetch upstream
+git merge upstream/master
+Another possibility is to use git rebase. This has the advantage of keeping the Este code-base clean,
+        by separating the framework commits from your own. Your own commits will always be on top, no
+        mix ups with framework-related noise. Also, it'll avoid having 2 merge commits
+        (upstream/master -> branch -> master).
