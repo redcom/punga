@@ -16,10 +16,10 @@ import { Link, Title } from '../components';
 
 const HomePage = () => (
   <Box>
-    <Title message="Este.js" />
+    <Title message="Punga" />
     <PageHeader
-      heading="Este"
-      description="Starter kit for universal full–fledged React apps. One stack
+      heading="Punga"
+      description="Based on este.js a starter kit for universal full–fledged React apps. One stack
         for browser, mobile, server."
     />
     <Heading size={1}>
