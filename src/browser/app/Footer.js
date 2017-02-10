@@ -23,7 +23,7 @@ const Footer = () => (
       <FormattedMessage {...messages.madeByHtml} />
     </Text>
     {'\u00a0'}
-    <Link size={-1} to="https://twitter.com/steida">
+    <Link size={-1} to="https://pinstry.com/">
       steida
     </Link>
   </Box>
