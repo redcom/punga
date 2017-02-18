@@ -4,8 +4,9 @@ import * as themes from '../themes';
 import Container from './Container';
 import Footer from './Footer';
 import Header from './Header';
-import Logo from './Logo';
 import Helmet from 'react-helmet';
+import Logo from './Logo';
+import Nav from './Nav';
 import React from 'react';
 import common from '../../common/app/common';
 import favicon from '../../common/app/favicon';
@@ -43,6 +44,7 @@ const App = (
     <Container>
       <Header />
         <Logo />
+        <Nav />
       <Box
         flex={1} // make footer sticky
       >
