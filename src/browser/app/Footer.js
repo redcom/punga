@@ -51,7 +51,7 @@ const Footer = () => (
       paddingVertical={1}
       minWidth="25%"
     >
-      <Text size={1} bold="true">
+      <Text size={1} bold>
         <FormattedMessage {...linksMessages.ourStory} />
       </Text>
       {'\u00a0'}
@@ -66,7 +66,7 @@ const Footer = () => (
       paddingVertical={1}
       minWidth="25%"
     >
-      <Text size={1} bold="true">
+      <Text size={1} bold>
         <FormattedMessage {...linksMessages.helpNav} />
       </Text>
       {'\u00a0'}
@@ -93,7 +93,7 @@ const Footer = () => (
       paddingVertical={1}
       minWidth="25%"
     >
-      <Text size={1} bold="true">
+      <Text size={1} bold>
         <FormattedMessage {...linksMessages.customOrder} />
       </Text>
       {'\u00a0'}
@@ -119,7 +119,7 @@ const Footer = () => (
       paddingVertical={1}
       minWidth="25%"
     >
-      <Text size={1} bold="true">
+      <Text size={1} bold>
         <FormattedMessage {...linksMessages.contact} />
       </Text>
       {'\u00a0'}

@@ -33,7 +33,7 @@ const Nav = ({ viewer }: NavProps) => (
     paddingHorizontal={0.5}
     borderWidth={1}
     borderStyle="solid"
-    borderRadius="20"
+    borderRadius={20}
   >
     <NavLink activeOnlyWhenExact to="/" message={linksMessages.home} />
     <NavLink to="/shop-buttons" message={linksMessages.shopButtons} />
