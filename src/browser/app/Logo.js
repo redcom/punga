@@ -1,5 +1,4 @@
 // @flow
-import type { State, User } from '../../common/types';
 import React from 'react';
 import { Box, Image } from '../../common/components';
 import { Link } from '../components';

@@ -10,7 +10,7 @@ const LinkMessages = defineMessages({
     defaultMessage: 'Fields',
     id: 'app.links.fields',
   },
-  /*Nav Links*/
+
   shopButtons: {
     defaultMessage: 'Shop Buttons',
     id: 'app.links.shopButtons',
@@ -39,7 +39,6 @@ const LinkMessages = defineMessages({
     defaultMessage: 'Sign in',
     id: 'app.links.signIn',
   },
-  /* / NavLink */
 
   notFound: {
     defaultMessage: 'Page Not Found',
