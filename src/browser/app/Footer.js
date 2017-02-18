@@ -28,7 +28,7 @@ const messages = defineMessages({
     id: 'footer.helpPayment',
   },
   contactByEmail: {
-    defaultMessage: "Contact us ny email",
+    defaultMessage: 'Contact us ny email',
     id: 'footer.contactByEmail',
   },
   contactPinterest: {
@@ -41,7 +41,7 @@ const messages = defineMessages({
 const Footer = () => (
   <Box
     flex={1}
-    alignSelf='stretch'
+    alignSelf="stretch"
     flexDirection="row"
     borderTopWidth={1}
     borderStyle="solid"

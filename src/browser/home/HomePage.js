@@ -1,18 +1,10 @@
 // @flow
-import * as themes from '../themes';
 import React from 'react';
 import {
   Box,
-  Button,
-  Heading,
-  Image,
   PageHeader,
-  Paragraph,
-  SwitchTheme,
-  Text,
-  ToggleBaseline,
 } from '../../common/components';
-import { Link, Title } from '../components';
+import { Title } from '../components';
 
 const HomePage = () => (
   <Box>
