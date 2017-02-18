@@ -10,18 +10,37 @@ const LinkMessages = defineMessages({
     defaultMessage: 'Fields',
     id: 'app.links.fields',
   },
-  users: {
-    defaultMessage: 'Users',
-    id: 'app.links.users',
+  /*Nav Links*/
+  shopButtons: {
+    defaultMessage: 'Shop Buttons',
+    id: 'app.links.shopButtons',
   },
   home: {
     defaultMessage: 'Home',
     id: 'app.links.home',
   },
-  me: {
-    defaultMessage: 'Me',
-    id: 'app.links.me',
+  customOrder: {
+    defaultMessage: 'Custom Order',
+    id: 'app.links.customOrder',
   },
+  ourStory: {
+    defaultMessage: 'Our Story',
+    id: 'app.links.ourStory',
+  },
+  helpNav: {
+    defaultMessage: 'Help',
+    id: 'app.links.helpNav',
+  },
+  contact: {
+    defaultMessage: 'Contact',
+    id: 'app.links.contact',
+  },
+  signIn: {
+    defaultMessage: 'Sign in',
+    id: 'app.links.signIn',
+  },
+  /* / NavLink */
+
   notFound: {
     defaultMessage: 'Page Not Found',
     id: 'app.links.notFound',
@@ -37,10 +56,6 @@ const LinkMessages = defineMessages({
   settings: {
     defaultMessage: 'Settings',
     id: 'app.links.settings',
-  },
-  signIn: {
-    defaultMessage: 'Sign in',
-    id: 'app.links.signIn',
   },
   todos: {
     defaultMessage: 'Todos',
