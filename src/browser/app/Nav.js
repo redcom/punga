@@ -7,8 +7,9 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from '../components';
 import { compose } from 'ramda';
 import { connect } from 'react-redux';
+import { Glyph, GlyphLink } from '../components/GlyphComponent';
 
-const NavLink = ({ activeOnlyWhenExact, to, message }) => (
+const NavLink = ({ activeOnlyWhenExact, to, message = {} }) => (
   <FormattedMessage {...message}>
     {message => (
       <Link
@@ -24,23 +25,29 @@ const NavLink = ({ activeOnlyWhenExact, to, message }) => (
   </FormattedMessage>
 );
 
+
 type NavProps = { viewer: ?User };
 
 const Nav = ({ viewer }: NavProps) => (
   <Box
     flexWrap="wrap"
     flexDirection="row"
+    justifyContent="space-around"
     paddingHorizontal={0.5}
     borderWidth={1}
     borderStyle="solid"
     borderRadius={20}
   >
-    <NavLink activeOnlyWhenExact to="/" message={linksMessages.home} />
     <NavLink to="/shop-buttons" message={linksMessages.shopButtons} />
     <NavLink to="/custom-order" message={linksMessages.customOrder} />
-    <NavLink to="/our-story" message={linksMessages.ourStory} />
     <NavLink to="/help" message={linksMessages.helpNav} />
     <NavLink to="/contact" message={linksMessages.contact} />
+    <GlyphLink
+      to="/cart-checkout"
+      message={linksMessages.cartCheckout}
+    >
+      <Glyph icon="cart" />
+    </GlyphLink>
     {!viewer && <NavLink to="/signin" message={linksMessages.signIn} />}
   </Box>
 );

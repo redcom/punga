@@ -23,9 +23,9 @@ const LinkMessages = defineMessages({
     defaultMessage: 'Custom Order',
     id: 'app.links.customOrder',
   },
-  ourStory: {
-    defaultMessage: 'Our Story',
-    id: 'app.links.ourStory',
+  cartCheckout: {
+    defaultMessage: 'My Cart',
+    id: 'app.links.cartCheckout',
   },
   helpNav: {
     defaultMessage: 'Help',
