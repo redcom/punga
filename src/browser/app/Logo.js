@@ -18,7 +18,6 @@ const Logo = () => (
         src={getWebsiteLogo()}
         alt="Go to Pinstery Home"
         size={{ width: 250, height: 250 }}
-        marginVertical={2}
       />
     </Link>
   </Box>

@@ -52,7 +52,7 @@ const Footer = () => (
       minWidth="25%"
     >
       <Text size={1} bold>
-        <FormattedMessage {...linksMessages.ourStory} />
+text
       </Text>
       {'\u00a0'}
       <Link size={-1} to="/copyright">
