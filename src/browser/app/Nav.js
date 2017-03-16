@@ -9,11 +9,10 @@ import { compose } from 'ramda';
 import { connect } from 'react-redux';
 import { Glyph, GlyphLink } from '../components/GlyphComponent';
 
-const NavLink = ({ activeOnlyWhenExact, to, message = {} }) => (
+const NavLink = ({ to, message = {} }) => (
   <FormattedMessage {...message}>
     {message => (
       <Link
-        activeOnlyWhenExact={activeOnlyWhenExact}
         bold
         paddingHorizontal={0.5}
         paddingVertical={0.5}
@@ -24,7 +23,6 @@ const NavLink = ({ activeOnlyWhenExact, to, message = {} }) => (
     )}
   </FormattedMessage>
 );
-
 
 type NavProps = { viewer: ?User };
 
@@ -42,10 +40,7 @@ const Nav = ({ viewer }: NavProps) => (
     <NavLink to="/custom-order" message={linksMessages.customOrder} />
     <NavLink to="/help" message={linksMessages.helpNav} />
     <NavLink to="/contact" message={linksMessages.contact} />
-    <GlyphLink
-      to="/cart-checkout"
-      message={linksMessages.cartCheckout}
-    >
+    <GlyphLink to="/cart-checkout" message={linksMessages.cartCheckout}>
       <Glyph icon="cart" />
     </GlyphLink>
     {!viewer && <NavLink to="/signin" message={linksMessages.signIn} />}
