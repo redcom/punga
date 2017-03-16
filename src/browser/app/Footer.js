@@ -5,7 +5,6 @@ import { FormattedMessage, defineMessages } from 'react-intl';
 import linksMessages from '../../common/app/linksMessages';
 import { Link } from '../components';
 
-
 const messages = defineMessages({
   copyright: {
     defaultMessage: 'Copyright',
@@ -37,7 +36,6 @@ const messages = defineMessages({
   },
 });
 
-
 const Footer = () => (
   <Box
     flex={1}
@@ -46,13 +44,9 @@ const Footer = () => (
     borderTopWidth={1}
     borderStyle="solid"
   >
-    <Box
-      flexDirection="column"
-      paddingVertical={1}
-      minWidth="25%"
-    >
+    <Box flexDirection="column" paddingVertical={1} minWidth="25%">
       <Text size={1} bold>
-text
+        text
       </Text>
       {'\u00a0'}
       <Link size={-1} to="/copyright">
@@ -60,12 +54,7 @@ text
       </Link>
     </Box>
 
-    <Box
-      flexDirection="column"
-      flexGrow={1}
-      paddingVertical={1}
-      minWidth="25%"
-    >
+    <Box flexDirection="column" flexGrow={1} paddingVertical={1} minWidth="25%">
       <Text size={1} bold>
         <FormattedMessage {...linksMessages.helpNav} />
       </Text>
@@ -87,12 +76,7 @@ text
       </Link>
     </Box>
 
-    <Box
-      flexDirection="column"
-      flexGrow={1}
-      paddingVertical={1}
-      minWidth="25%"
-    >
+    <Box flexDirection="column" flexGrow={1} paddingVertical={1} minWidth="25%">
       <Text size={1} bold>
         <FormattedMessage {...linksMessages.customOrder} />
       </Text>
@@ -114,11 +98,7 @@ text
       </Link>
     </Box>
 
-    <Box
-      flexDirection="column"
-      paddingVertical={1}
-      minWidth="25%"
-    >
+    <Box flexDirection="column" paddingVertical={1} minWidth="25%">
       <Text size={1} bold>
         <FormattedMessage {...linksMessages.contact} />
       </Text>

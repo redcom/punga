@@ -43,8 +43,8 @@ const App = (
     />
     <Container>
       <Header />
-        <Logo />
-        <Nav />
+      <Logo />
+      <Nav />
       <Box
         flex={1} // make footer sticky
       >
