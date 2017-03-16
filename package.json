@@ -129,6 +129,6 @@
   },
   "devDependencies": {
     "firebase-bolt": "^0.8.2",
-    "firebase-tools": "^3.2.2"
+    "firebase-tools": "3.5.0"
   }
 }
