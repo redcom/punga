@@ -12,9 +12,9 @@ const HeaderLink = ({ to, message, ...props }) => (
   <FormattedMessage {...message}>
     {message => (
       <Link
-        bold
+        regular
         paddingHorizontal={0.5}
-        paddingVertical={0.5}
+        paddingVertical={0.1}
         to={to}
         {...props}
       >
@@ -30,14 +30,12 @@ type HeaderProps = {
 
 const Header = ({ viewer }: HeaderProps) => (
   <Box
+    alignSelf="flex-end"
     flexWrap="wrap"
     flexDirection="row"
-    paddingHorizontal={0.5}
-    borderWidth={1}
-    borderStyle="solid"
+    paddingHorizontal={0.1}
   >
-    <HeaderLink exact to="/" message={linksMessages.home} />
-    {false && !viewer && 'bottom'}
+    {!viewer && <HeaderLink to="/signin" message={linksMessages.signIn} />}
   </Box>
 );
 
@@ -45,10 +43,3 @@ export default compose(
   connect((state: State) => ({ viewer: state.users.viewer })),
 )(Header);
 
-// <HeaderLink to="/users" message={linksMessages.users} />
-// <HeaderLink to="/todos" message={linksMessages.todos} />
-// <HeaderLink to="/fields" message={linksMessages.fields} />
-// <HeaderLink to="/intl" message={linksMessages.intl} />
-// <HeaderLink to="/offline" message={linksMessages.offline} />
-// <HeaderLink to="/me" message={linksMessages.me} />
-// {!viewer && <HeaderLink to="/signin" message={linksMessages.signIn} />}

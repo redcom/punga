@@ -39,7 +39,8 @@ const Link = (
       style={(theme, textStyle) => ({
         ...linkStyle,
         ...(style && style(theme, { ...textStyle, ...linkStyle })),
-      })}
+      })
+      }
       {...props}
     />
   );

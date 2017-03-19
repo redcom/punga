@@ -183,6 +183,17 @@ const makeConfig = options => {
               ignore: ['original/**'],
             },
           ),
+          new CopyWebpackPlugin(
+            [
+              {
+                from: './src/common/app/fonts/',
+                to: 'fonts',
+              },
+            ],
+            {
+              ignore: ['original/**'],
+            },
+          ),
         );
       }
       return plugins;
