@@ -12,7 +12,6 @@ const HeaderLink = ({ to, message, ...props }) => (
   <FormattedMessage {...message}>
     {message => (
       <Link
-        regular
         paddingHorizontal={0.5}
         paddingVertical={0.1}
         to={to}

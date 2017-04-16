@@ -7,6 +7,10 @@ import device from './device/reducer';
 import intl from './intl/reducer';
 import todos from './todos/reducer';
 import users from './users/reducer';
+
+// pinstery
+import contact from './contact/reducer';
+
 import { combineReducers } from 'redux';
 import { fieldsReducer as fields } from './lib/redux-fields';
 
@@ -24,6 +28,7 @@ const resetStateOnSignOutReducer = (reducer, initialState) =>
       app: state.app,
       config: initialState.config,
       device: initialState.device,
+    contact: initialState.contact,
       intl: initialState.intl,
     };
     // Preserve Found router reducer.
@@ -43,6 +48,7 @@ const configureReducer = (platformReducers: Object, initialState: Object) => {
     app,
     auth,
     config,
+    contact,
     device,
     fields,
     intl,

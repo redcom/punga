@@ -6,6 +6,7 @@ const initialState = {
   appVersion: '',
   firebase: null,
   sentryUrl: '',
+  apiUrl: '',
 };
 
 const reducer = (state: ConfigState = initialState): ConfigState => state;
