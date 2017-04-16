@@ -39,26 +39,6 @@ const mapFirebaseErrorToEsteValidationError = (code) => {
   return new ValidationError(code, { prop });
 };
 
-const initialState = (window || {}).__INITIAL_STATE__; // eslint-disable-line no-underscore-dangle
-
-const sendMessageWithFetcher = (email, message) => {
-  const apiUrl = process.env.IS_BROWSER
-    ? initialState.config.apiUrl
-    : '/api';
-
-  return fetch(`${apiUrl}/contactService`, {
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    method: 'POST',
-    body: JSON.stringify({
-      message,
-      email,
-    }),
-  });
-};
-
 const contactEpic = (
   action$: any,
   { firebase, getUid, validate, now }: Deps,
@@ -66,7 +46,6 @@ const contactEpic = (
   const sendMessage = ({ email, message }) => {
     const promises = [
       validateEmailAndMessage(validate, { email, message }),
-      sendMessageWithFetcher(email, message),
       firebase.update({
         [`contact-messages/${getUid()}`]: {
           createdAt: now(),

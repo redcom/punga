@@ -65,7 +65,6 @@ class ContactForm extends React.Component {
             disabled={disabled}
             maxLength={100}
             placeholder="example@email.com"
-            // That's how we can show field error.
           />
           <FieldTextarea
             {...fields.message}

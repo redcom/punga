@@ -2,6 +2,7 @@
 export { default as Box } from './Box';
 export { default as Button } from './Button';
 export { default as Field } from './Field';
+export { default as FieldTextarea } from './FieldTextarea';
 export { default as Heading } from './Heading';
 export { default as Image } from './Image';
 export { default as Loading } from './Loading';
@@ -13,6 +14,7 @@ export { default as Paragraph } from './Paragraph';
 export { default as SwitchTheme } from './SwitchTheme';
 export { default as Text } from './Text';
 export { default as TextInput } from './TextInput';
+export { default as Textarea } from './Textarea';
 export { default as ToggleBaseline } from './ToggleBaseline';
 
 // For the inspiration, check:

@@ -11,7 +11,7 @@ isViewer(uid) { isSignedIn() && auth.uid == uid }
 
 // github.com/firebase/bolt/blob/master/docs/guide.md#dealing-with-timestamps
 type CurrentTimestamp extends Number {
-  validate() { this == now }
+  validate() { this > 0 }
 }
 
 type ShortString extends String {
@@ -49,6 +49,22 @@ type User {
   id: ShortRequiredString,
   photoURL: LongString,
   validate() { this.id == auth.uid }
+}
+
+type ContactMessage {
+  createdAt: CurrentTimestamp,
+  email: ShortRequiredString,
+  message: ExtraLongString,
+}
+
+type Doctor {
+  id: ShortRequiredString,
+  createdAt: CurrentTimestamp,
+  expertize: ShortRequiredString,
+  validated: Boolean,
+  name: ShortRequiredString,
+  address: LongRequiredString,
+  phones: ShortString,
 }
 
 type UserEmail {
@@ -89,4 +105,16 @@ path /users-presence/{uid} is UserPresence[] {
   // TODO: Add isViewer and isFirebaseServer somehow.
   update() { true }
   delete() { true }
+}
+
+path /contact-messages/{uuid} is ContactMessage {
+  create() { true }
+  update() { true }
+  read() { true }
+}
+
+path /doctors/{uuid} is Doctor {
+  create() { true }
+  update() { true }
+  read() { true }
 }
